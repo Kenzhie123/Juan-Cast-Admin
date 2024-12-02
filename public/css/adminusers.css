@@ -1,0 +1,36 @@
+#main_content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+#top_container{
+    display: flex;
+    justify-content: space-between;
+    margin:0 40px;
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+#top_container>button{
+    width: 100px;
+}
+
+#users_table_container{
+    min-height: 70vh;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+
+#users_table{
+    
+    width: calc(100% - 20px);
+    margin: auto;
+}
+
+
+
+#users_table>tbody>tr:nth-child(odd)
+{
+}

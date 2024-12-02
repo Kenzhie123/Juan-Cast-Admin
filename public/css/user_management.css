@@ -1,0 +1,47 @@
+#main_content{
+    margin-top: 20px;
+    
+}
+
+#users_container{
+    width: 95%;
+    margin: 0 20px;
+}
+
+#users_container>table{
+    width: calc(100% - 20px);
+    margin: auto;
+}
+
+#users_container>table td{
+    font-size: smaller;
+}
+#users_container>table td>button{
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+}
+#users_container>table td>button>img{
+    width: 30px;
+    height: 30px;
+}
+
+
+#top_container>h2{
+    margin-left: 20px;
+    padding: 10px 0;
+    color: var(--primary);
+}
+#search_container{
+    display: flex;
+    margin:10px 20px;
+}
+
+#search_container>input[type="text"]
+{
+    width: 20vw;
+    margin: 0 10px;
+}
+#search_container>h3{
+    color: var(--primary);
+}

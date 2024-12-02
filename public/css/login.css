@@ -1,0 +1,35 @@
+#login_container{
+    background-color: var(--primary);
+    height: 100vh;
+    padding-top: 20vh;
+}
+
+#login_container>form{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    background-color: white;
+    margin: auto;
+    height: 30vh;
+    border-radius: 20px;
+    padding-top: 20px;
+    
+}
+
+#login_container>form>img{
+    height: 20%;
+    width: fit-content;
+    margin: 0 auto;
+}
+#login_container>form>h2{
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+#login_container>form>input{
+    margin:5px 20px
+}
+#login_container>form>button{
+    margin:5px 20px
+}
