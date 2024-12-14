@@ -22,7 +22,8 @@ class LoginController extends Controller
         if(count($userExists) > 0)
         {
             Session::put('loggedInUserID',$userExists[0]->id);
-            return redirect()->route("homepage.index");
+            session(['environment'=>'prod']);
+            return redirect()->route("dashboard.index");
         }
         else
         {

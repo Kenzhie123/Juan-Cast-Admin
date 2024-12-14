@@ -39,14 +39,14 @@
                         Users
                     </a>
                 </li>
-                <li>
-                    <a href="adminusers">
+                <li  class="{{ $currentPage == 'artist_list' ? 'navigation_selected' : ''  }}">
+                    <a href="artist_list">
                         <img src="{{asset('icons/artist_icon.svg')}}">
                         Artists
                     </a>
                 </li>
-                <li>
-                    <a href="adminusers">
+                <li class="{{ $currentPage == 'polllist' ? 'navigation_selected' : ''  }}">
+                    <a href="polllist">
                         <img src="{{asset('icons/polls_icon.svg')}}">
                         Polls
                     </a>
@@ -128,9 +128,28 @@
             </ul>
         </nav>
     </div>
+    <div id="top_container">
+        <div id="tc_first_column">
+            <div id="environment_select_container">
+                <form id="environment_select_form"  method="post">
+                    @csrf
+                    <select name="environment" id="environment_select" class="{{(session('environment')=="prod") ?"environment_select_prod": "environment_select_dev"}}"> 
+                        
+                        <option value="prod" {{(session('environment')=="prod") ?"selected": ""}}>Production</option>
+                        <option value="dev" {{(session('environment')=="dev") ?"selected": ""}}>Development</option>
+                    </select>
+                </form>
+            </div>
+            @yield("page_title")
+        </div>
+        
+    </div>
     <div id="main_content">
         @yield('main_content')
     </div>
+
+    @yield('custom_scripts')
+    <script src="{{asset("js/navigation.js")}}"></script>
 
 </body>
 

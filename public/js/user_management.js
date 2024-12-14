@@ -3,6 +3,7 @@ function setListeners()
     var search_field = document.getElementById('search_field');
     var search_field_select = document.getElementById('search_field_select');
     var user_trs = document.querySelectorAll('.user_tr');
+    var order_by_select = document.querySelectorAll('.user_tr');
 
     search_field.addEventListener('keydown',()=>{
         user_trs.forEach((user_tr)=>{
@@ -28,6 +29,10 @@ function setListeners()
                 user_tr.classList.remove('hidden');
             }
         })
+    })
+
+    order_by_select.addEventListener('change',()=>{
+        
     })
 }
 

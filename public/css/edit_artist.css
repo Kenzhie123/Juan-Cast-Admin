@@ -1,0 +1,53 @@
+#edit_artist_container{
+    width: 40vw;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#artist_profile_container{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+    border:5px solid var(--primary-light);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#artist_details_container{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.labeled_form_input{
+    margin-top: 5px;
+}
+
+#update_button{
+    width: 100%;
+    margin-top: 20px;
+}
+
+#artist_profile_image_overlay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(29, 20, 110, 0.37);
+    opacity: 0;
+}
+#artist_profile_image_overlay>img{
+    height: 50px;
+    width: 50px;
+}
+
+#artist_profile_image_overlay:hover{
+    cursor: pointer;
+    opacity: 1;
+}

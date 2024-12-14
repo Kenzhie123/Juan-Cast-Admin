@@ -4,12 +4,28 @@
     <link rel="stylesheet" href="{{asset('css/adminusers.css')}}">
 @endsection
 
+@section("page_title")
+    <div id="page_title_container">
+        <h1>Admin Users</h1>
+    </div>
+@endsection
+
 @section('main_content')
     
     <div id="users_table_container" class="bordered_container">
-        <div id="top_container">
-            <h2>Admin Users</h2>
-            <button class="default_button">Add + </button>
+        <div id="table_top_container">
+            <div id="search_container">
+                <input type="text" class="default_input" placeholder="Enter search key" id="search_field"/>
+                <select name="" id="search_field_select" class="default_input">
+                    <option value="0">User ID</option>
+                    <option value="1">Full Name</option>
+                    <option value="2">Email</option>
+                    <option value="3">Username</option>
+                    <option value="4">Mobile Number</option>
+                </select>
+                <button class="default_button">Add + </button>
+            </div>
+           
         </div>
         <table id="users_table" class="default_table">
             <thead>

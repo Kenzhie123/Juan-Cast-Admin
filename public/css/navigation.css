@@ -1,7 +1,6 @@
 body{
     display: grid;
     grid-template-columns: 1fr 5fr;
-    
 }
 
 
@@ -10,6 +9,7 @@ body{
     height: 100%;
     width: 15vw;
     position: fixed;
+    z-index: 2;
 }
 #left_container h3{
     text-align: center;
@@ -74,8 +74,6 @@ body{
     
 }
 
-
-
 #navigation img{
     width: 20px;
     height: 20px;
@@ -86,8 +84,115 @@ body{
 
 #main_content{
     margin-left: 15vw;
-    margin-top: 100px;
+    margin-top: 20px;
     width: 85vw;
+    padding-top: 105px;
+    
 }
 
 
+/* Top Container */
+
+#top_container{
+    background-color: var(--primary-darker);
+    width: 100%;
+    height: 105px;
+    position: fixed;
+    padding-left: 15vw;
+    display: flex;
+    
+}
+
+#page_title_container{
+    margin-left: 30px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+#page_title_container>h1{
+    color: white;
+}
+
+
+#environment_type_container{
+    margin-right: 300px;
+}
+
+#tc_first_column{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+#environment_select_container>form{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+#environment_select_container>form>select{
+    background-color: var(--primary-darker);
+    border:none;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    width: 200px;
+}
+
+#search_container{
+    margin: 20px 20px;
+    display: flex;
+}
+#search_container>.labeled_container_row{
+    margin: 0 10px;
+}
+
+.environment_select_prod{
+    border-bottom: 2px solid var(--danger)!important;
+}
+
+.environment_select_dev{
+    border-bottom: 2px solid var(--success)!important;
+}
+
+
+.labeled_container_row{
+    width: fit-content;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.labeled_container_row>label{
+    font-size: smaller;
+    margin-top: auto;
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.labeled_form_input{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+.labeled_form_input>label{
+    margin: 0 10px;
+    font-size: medium;
+    font-weight: 800;
+    color: var(--primary-darker);
+}
+
+.radio_true_false_container{
+    margin-top: 0;
+}
+.radio_true_false_container>label{
+    font-weight: 400;
+    color:black;
+    font-size: smaller  ;
+}
+
+
+
+.labeled_form_input>input,.labeled_form_input>select{
+    
+}

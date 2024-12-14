@@ -5,24 +5,41 @@
 <link rel="stylesheet" href="{{asset('css/user_management.css')}}">
 @endsection
 
+@section('page_title')
+    <div id="page_title_container">
+        <h1>Users Management</h1>
+    </div>
+@endsection
 
 @section('main_content')
-<div id="search_container">
-    <h3>Search</h3>
-    <input type="text" class="default_input" placeholder="Enter search key" id="search_field"/>
-    <select name="" id="search_field_select" class="default_input">
-        <option value="0">User ID</option>
-        <option value="1">Full Name</option>
-        <option value="2">Email</option>
-        <option value="3">Username</option>
-        <option value="4">Mobile Number</option>
-    </select>
-</div>
+
 <div id="users_container" class="bordered_container">
     
     <table class="default_table">
-        <div id="top_container">
-            <h2>Users</h2>
+        <div id="table_top_container">
+            <div id="search_container">
+                <div class="labeled_container_row w_100">
+                    <label for=""></label>
+                    <input type="text" class="default_input" placeholder="Enter search key" id="search_field"/>
+                </div>
+                <div class="labeled_container_row">
+                    <label for="">Search By</label>
+                    <select name="" id="search_field_select" class="default_input">
+                        <option value="0">User ID</option>
+                        <option value="1">Full Name</option>
+                        <option value="2">Email</option>
+                        <option value="3">Username</option>
+                        <option value="4">Mobile Number</option>
+                    </select>
+                </div>
+                <div class="labeled_container_row">
+                    <label for="">Order By</label>
+                    <select name="" id="order_by_select" class="default_input">
+                        <option>Stars</option>
+                    </select>
+                </div>
+                
+            </div>
         </div>
         <thead>
             <th>User ID</th>
@@ -34,7 +51,9 @@
             <th></th>
         </thead>
         <tbody>
-            @foreach ($users as $user)
+            @if(isset($users))
+            
+                @foreach ($users as $user)
                 <tr class="user_tr">
                     <td>{{$user['userID']}}</td>
                     <td>{{isset($user['fullName'])? $user['fullName'] : ''}}</td>
@@ -44,7 +63,9 @@
                     <td>{{isset($user['votingPoints']) ? $user['votingPoints'] : ''}}</td>
                     <td><button class="transparent_button"><img src="{{asset('icons/view_icon.svg')}}"></button></td>
                 </tr>
-            @endforeach
+                @endforeach
+            
+            @endif
         </tbody>
     </table>
 </div>

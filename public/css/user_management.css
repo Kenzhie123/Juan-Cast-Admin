@@ -1,11 +1,8 @@
-#main_content{
-    margin-top: 20px;
-    
-}
 
 #users_container{
-    width: 95%;
-    margin: 0 20px;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 #users_container>table{
@@ -13,9 +10,7 @@
     margin: auto;
 }
 
-#users_container>table td{
-    font-size: smaller;
-}
+
 #users_container>table td>button{
     width: 50px;
     align-items: center;
@@ -27,21 +22,24 @@
 }
 
 
-#top_container>h2{
+#table_top_container{
+    padding-top: 10px;
+}
+
+#table_top_container>h2{
+    
     margin-left: 20px;
     padding: 10px 0;
     color: var(--primary);
 }
 #search_container{
     display: flex;
-    margin:10px 20px;
+    margin: 0px 20px;
+    margin-bottom:20px ;
+    width: unset;
 }
 
-#search_container>input[type="text"]
+#search_container>.labeled_container_row
 {
-    width: 20vw;
     margin: 0 10px;
-}
-#search_container>h3{
-    color: var(--primary);
 }
