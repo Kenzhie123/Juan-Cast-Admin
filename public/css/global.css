@@ -19,6 +19,8 @@
     --text-color-dark:#000000B3;
     --warning:#ffc107;
     --success:#34cc36;
+    --overlay-color:rgba(29, 20, 110, 0.37);
+    --gold:#FFD700;
 }
 
 body{
@@ -223,6 +225,7 @@ input[type="radio"]:hover{
 
 .labeled_hr h4{
     padding: 0 10px;
+    white-space: nowrap;
 }
 
 .custom_hr{

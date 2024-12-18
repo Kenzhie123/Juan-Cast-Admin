@@ -19,7 +19,7 @@
         <div id="table_top_container">
             <div id="search_container">
                 <div class="labeled_container_row w_100">
-                    <label for=""></label>
+                    <label for="">User Count: {{count($users)}}</label>
                     <input type="text" class="default_input" placeholder="Enter search key" id="search_field"/>
                 </div>
                 <div class="labeled_container_row">
@@ -35,7 +35,11 @@
                 <div class="labeled_container_row">
                     <label for="">Order By</label>
                     <select name="" id="order_by_select" class="default_input">
-                        <option>Stars</option>
+                        <option selected>Stars</option>
+                        <option>Suns</option>
+                        <option>Name</option>
+                        <option>Email</option>
+                        <option>Username</option>
                     </select>
                 </div>
                 
@@ -48,20 +52,20 @@
             <th>Username</th>
             <th>Mobile Number</th>
             <th>Stars</th>
-            <th></th>
+            <th>Suns</th>
         </thead>
-        <tbody>
+        <tbody id="user_list_tbody">
             @if(isset($users))
             
                 @foreach ($users as $user)
-                <tr class="user_tr">
+                <tr class="user_tr" onclick="window.location.replace('{{route('userinformation.index',['userid'=>$user['userID']])}}')">
                     <td>{{$user['userID']}}</td>
                     <td>{{isset($user['fullName'])? $user['fullName'] : ''}}</td>
                     <td>{{isset($user['email']) ? $user['email'] : ''}}</td>
                     <td>{{isset($user['username']) ? $user['username'] : ''}}</td>
                     <td>{{isset($user['number']) ? $user['number'] : ''}}</td>
-                    <td>{{isset($user['votingPoints']) ? $user['votingPoints'] : ''}}</td>
-                    <td><button class="transparent_button"><img src="{{asset('icons/view_icon.svg')}}"></button></td>
+                    <td>{{isset($user['votingPoints']) ? number_format($user['votingPoints']) : 0}}</td>
+                    <td>{{isset($user['sunvotingpoints']) ? number_format($user['sunvotingpoints']) : ''}}</td>
                 </tr>
                 @endforeach
             

@@ -47,7 +47,7 @@
         </div>
         <div class="labeled_container_row">
             <label for=""></label>
-            <button class="default_button" id="addButton">Add</button>
+            <button class="default_button" id="addButton" onclick="window.location.replace('{{route('add_poll.index')}}')">Add</button>
         </div>
     </div>
 
@@ -120,7 +120,7 @@
     </div> --}}
     <div id="poll_list_container">
         @foreach ($pollList as $poll)
-            <a href="{{route('edit_poll',['pollID'=>$poll['pollID']])}}" class="poll_list_item">
+            <a href="{{route('edit_poll.index',['pollID'=>$poll['pollID']])}}" class="poll_list_item">
                 <div class="pli_banner_image_container" style="background-image: url('{{$poll['pollBanner']}}')">
 
                 </div>
@@ -129,10 +129,10 @@
                     <h3>{{$poll['poll_title']}}</h3>
                     <p>{{formatDateString($poll['date_from'])}} - {{formatDateString($poll['date_to'])}}</p>
                     <div class="pli_category_container">
-                        <img src="{{asset('images/category_logo.svg')}}">
-                        <p>10 P-POP</p>
-                        <img src="{{asset('images/star.svg')}}">
-                        <p>Minor</p>
+                        <img src="{{asset('icons/category_logo.svg')}}">
+                        <p>{{count($poll['artists'])}} {{$poll['category']}}</p>
+                        <img src="{{$poll['poll_type']== "Minor" ? asset('icons/star.svg'): asset('icons/sun.svg')}}">
+                        <p>{{$poll['poll_type']}}</p>
                     </div>
                 </div>
             </a>

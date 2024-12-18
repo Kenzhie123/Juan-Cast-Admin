@@ -1,6 +1,6 @@
 
 #users_container{
-    width: 80%;
+    width: 85%;
     margin: auto;
     padding-bottom: 20px;
 }
@@ -42,4 +42,9 @@
 #search_container>.labeled_container_row
 {
     margin: 0 10px;
+}
+
+.user_tr:hover{
+    background-color: #5271ff1f;
+    cursor: pointer;
 }

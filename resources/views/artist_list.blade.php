@@ -56,7 +56,7 @@
                     <td>{{$artist['artist_name']}}</td>
                     <td>Boy, Group</td>
                     <td>
-                        <button class="default_button" onclick="window.location.replace('{{route('edit_artist',['artist_id'=>$artist['artist_id']])}}')"><img src="{{asset('icons/edit_icon.svg')}}"></button>
+                        <button class="default_button" onclick="window.location.replace('{{route('edit_artist.index',['artist_id'=>$artist['artist_id']])}}')"><img src="{{asset('icons/edit_icon.svg')}}"></button>
                         <button class="danger_button"><img src="{{asset('icons/delete_icon.svg')}}"></button>
                     </td>
                 </tr>

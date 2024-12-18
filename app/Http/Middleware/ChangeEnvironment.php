@@ -20,8 +20,16 @@ class ChangeEnvironment
         
         if($request->isMethod('post'))
         {
-            session(['environment'=>$request['environment']]);
-            return $next($request);
+            if($request['environment'] != null)
+            {
+                session(['environment'=>$request['environment']]);
+                return $next($request);
+            }
+            else
+            {
+                return $next($request);
+            }
+            
         }
         else
         {

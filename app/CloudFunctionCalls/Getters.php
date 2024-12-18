@@ -9,25 +9,29 @@ class Getters{
 
     public function getAllUsers()
     {
-        return (new Connections)->runFunction("getAllUsers","");
+        return (new Connections)->runGetFunction("getAllUsers","");
     }
     function getAllPolls()
     {
-        return (new Connections)->runFunction("getAllPolls","");
+        return (new Connections)->runGetFunction("getAllPolls","");
     }
 
     function getPollInfoFull($pollID)
     {
-        return (new Connections)->runFunction("getPollInfoFull",$pollID);
+        return (new Connections)->runGetFunction("getPollInfoFull",$pollID);
     }
 
     function getAllArtists()
     {
-        return (new Connections)->runFunction("getAllArtists","");
+        return (new Connections)->runGetFunction("getAllArtists","");
     }
 
     function getSpecArtistInfo($artistID)
     {
-        return (new Connections)->runFunction("getSpecArtistInfo",$artistID);
+        return (new Connections)->runGetFunction("getSpecArtistInfo",$artistID);
+    }
+    function getSpecUserInfo($userID)
+    {
+        return (new Connections)->runGetFunction("getSpecUserInfo",$userID);
     }
 }
